@@ -18968,9 +18968,9 @@ MonoBehaviour:
   activeMeshFilter: {fileID: 569846313}
   activeMeshRenderer: {fileID: 569846312}
   activeTransform: {fileID: 569846314}
-  targetShape: 0
-  targetColor: 0
-  targetSize: 0
+  targetShape: 1
+  targetColor: 1
+  targetSize: 2
   targetRotation: {x: 0, y: 0, z: 0}
   cubeMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   sphereMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
