@@ -28,9 +28,15 @@ public class VRObjectMatcher : MonoBehaviour {
     private PropShape currentShape = PropShape.Cube;
     private PropColor currentColor = PropColor.Red;
     private PropSize currentSize = PropSize.Medium;
+    
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
 
-    void Start() {
-        ResetObject(); // Ensure the object starts clean
+    void Start() { 
+        initialPosition = activeTransform.position;
+        initialRotation = activeTransform.rotation; 
+        
+        ResetObject();
     }
 
     // --- SHAPE CONTROLS ---
@@ -58,8 +64,13 @@ public class VRObjectMatcher : MonoBehaviour {
         SetShapeCube();
         SetColorRed();
         SetSizeMedium();
-        activeTransform.rotation = Quaternion.identity;
-        feedbackText.text = "Object reset to original state.";
+
+        activeTransform.SetPositionAndRotation(
+            initialPosition,
+            initialRotation
+        );
+
+        feedbackText.text = "Objeto reiniciado.";
         feedbackText.color = Color.white;
     }
 
